@@ -1,0 +1,114 @@
+@import "../themes/index.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 20px;
+
+        .formcontainer {
+            min-width: 200px;
+
+            .form {
+
+                .title {
+                    margin-bottom: 20px;
+                }
+
+                .subtitle {
+                    font-weight: 600;
+                    font-size: 28px;
+                    color: $color-principal;
+                    margin-bottom: 10px;
+                }
+
+                .formInputs {
+                    width: 90%;
+
+                    .input {
+                        margin-bottom: 10px;
+                    }
+
+                    .senhas {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 10px;
+                    }
+
+                    .btnregister {
+                        width: 100%;
+                        border: 2px solid $color-principal;
+                        color: $color-one;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                    }
+
+                    .btnregister:hover {
+                        background-color: $color-principal;
+                    }
+
+                    .login {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 10px;
+
+                        .btnlogin {
+                            border: 2px solid $color-principal;
+                            color: $color-one;
+                            font-weight: 600;
+                        }
+
+                        .btnlogin:hover {
+                            background-color: $color-principal;
+                        }
+                    }
+
+                    @media(max-width: 449px) {
+                        .senhas {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            gap: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .imagecontainer {
+            .image {
+                max-width: 650px;
+                height: 600px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+
+        @media(max-width: 1098px) {
+            .imagecontainer {
+                .image {
+                    max-width: 500px;
+                    height: 500px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        @media(max-width: 944px) {
+            .imagecontainer {
+                display: none;
+            }
+        }
+
+    }
+}

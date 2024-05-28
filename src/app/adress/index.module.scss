@@ -1,0 +1,111 @@
+@import "../../themes/index.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    .return {
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        font-size: 20px;
+
+        .iconreturn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .content {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            .formInputs {
+
+                .logo {
+                    object-fit: cover;
+                    width: 550px;
+                    height: 200px;
+                    margin-bottom: 10px;
+                }
+
+                .inputcontainer {
+                    margin: 10px 0;
+
+                    .input {
+                        min-width: 550px;
+                    }
+                }
+
+                .smallinputs {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+
+                    .input2 {
+                        min-width: 270px;
+                    }
+                }
+
+                .btnregister {
+                    margin: 10px 0;
+                    border: 2px solid $color-principal;
+                    color: $color-one;
+                    font-weight: 600;
+                }
+
+                .btnregister:hover {
+                    background-color: $color-principal;
+                    color: $Background-white;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 585px) {
+        .content {
+            .form {
+                .formInputs {
+
+                    .logo {
+                        width: 290px;
+                        height: 100px;
+                        margin-bottom: 10px;
+                    }
+
+                    .inputcontainer {
+                        margin: 10px 0;
+
+                        .input {
+                            min-width: 290px;
+                        }
+                    }
+
+                    .smallinputs {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0;
+
+                        .input2 {
+                            min-width: 290px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

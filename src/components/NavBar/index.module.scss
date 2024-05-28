@@ -1,0 +1,109 @@
+@import "../../themes/index.scss";
+
+.container {
+    min-width: 100%;
+
+    .nav {
+        background-color: $Background-white;
+        border-bottom: 2px solid $color-one;
+
+        .bar {
+            display: flex;
+            justify-content: space-between;
+
+            .logocontainer {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                gap: 10px;
+                margin: 10px 10px 10px 0;
+
+                .logoname {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $color-one;
+                    font-weight: 700;
+                    font-size: 20px;
+                }
+            }
+
+            .optionscontainer {
+                display: flex;
+                gap: 10px;
+
+                .optionbtn {
+                    border-radius: 0px;
+                    color: $color-one;
+                    border: 2px solid $color-one;
+                    font-weight: 600;
+                }
+
+                .optionbtn:hover {
+                    background-color: $color-principal;
+                    color: $Background-white;
+                }
+            }
+
+            .btncontainer {
+                display: flex;
+                gap: 10px;
+
+                .btn1 {
+                    border-radius: 0px;
+                    color: $color-one;
+                    border: 2px solid $color-one;
+                    font-weight: 600;
+                }
+
+                .btn1:hover {
+                    background-color: $color-principal;
+                    color: $Background-white;
+                }
+
+                .btn2 {
+                    border-radius: 0px;
+                    color: $Background-white;
+                    background-color: $color-one;
+                    border: 2px solid $color-one;
+                    font-weight: 600;
+                }
+
+                .btn2:hover {
+                    background-color: $color-principal;
+
+                }
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            @media(max-width: 965px) {
+                .optionscontainer {
+                    display: none;
+                }
+
+                .btncontainer {
+                    display: none;
+                }
+
+                .sidebar {
+                    display: block;
+                }
+            }
+
+            @media(max-width: 340px) {
+                .logocontainer {
+
+                    .logoname {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
